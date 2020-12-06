@@ -1,1 +1,104 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	border: 2px solid red;
+}
 
+body{
+	background-color: #6b7d7d;
+	font-family: 'Comfortaa', cursive;
+}
+
+/*Header-------------------------------------------------------------------*/
+header{
+	text-align: center;
+	border-color: blue;
+    margin:5vh auto;
+    height: 25vh;
+}
+#name{
+	font-family: 'Comfortaa', sans-serif;
+	font-size: 3rem;
+	font-weight:600 ;
+}
+hr{
+	background-color: #1b1b1b;
+	width: 20%;
+    border-radius: 50%;
+	height: 3px;
+	margin:0px auto;
+	border:none;
+
+}
+#greet{
+	font-weight: bold;
+	margin-top: 5vh;
+	padding:0 20%;  /*upto 700px*/
+}
+
+/*Section-------------------------------------------------------------------*/
+section{
+	display: flex;
+	/*flex-wrap: nowrap;*/
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	/*text-align: center;*/
+	/*display: flex;*/
+
+}
+select{
+	width: 20rem;
+	height: 2rem;
+	font-family: 'Comfortaa', cursive;
+	font-weight: bold;
+	font-size: 1rem;
+	/*margin: 1rem auto 0rem;*/
+
+}
+
+#input{
+	/*margin:0 auto;*/
+		background-color: #ffffff;
+		margin-top: 1rem;
+}
+input{
+	width: 20rem;
+	height: 2rem;
+	padding:0 5px;
+	font-family: 'Comfortaa', cursive;
+	font-weight: bold;
+	font-size: 1rem;
+
+}
+i{
+	height: 30px;
+	background-color: #ffffff;
+	padding: 6px;
+	  margin:0;
+}
+i:hover{
+  background-color: #828288;
+}
+
+select,input:focus{
+	outline: none;
+}
+
+/*Output-------------------------------------------------------*/
+ #output{
+ 	width: 20rem;
+	height: 10rem;
+	margin-top: 1rem;
+ 	border:2px solid darkgrey;
+ 	display: flex;
+ 	flex-direction: column;
+ 	justify-content: space-around;
+ 	text-align: center;
+
+ }
+
+*{
+	border:none;
+}
