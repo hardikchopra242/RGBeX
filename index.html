@@ -15,9 +15,10 @@
 	  <link rel="stylesheet" type="text/css" href="style.css">
 
       <!-- Fonts and Icons -->
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap" rel="stylesheet">  
 	  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       
 </head>
 <body>
@@ -32,12 +33,20 @@
 
 <!-- UserInput-->
 <section>
-	 <select>
-	 	<option>Note :</option>
-	 	<option>Hey Stalker!!</option>
-	 	<option>Site is under</option>
-	 	<option>construcion</option> 	
-	 </select>
+    
+    <div class="select" tabindex="1">
+		  <input class="selectopt" name="test" type="radio" id="opt1" checked>
+		  <label for="opt1" class="option">Hex to RGB</label>
+		  <input class="selectopt" name="test" type="radio" id="opt2">
+		  <label for="opt2" class="option">Hex to RGB</label>
+		  <input class="selectopt" name="test" type="radio" id="opt3">
+		  <label for="opt3" class="option">RGB to Hex</label>
+		  <input class="selectopt" name="test" type="radio" id="opt4">
+		  <label for="opt4" class="option">Dec to Bin</label>
+		  <input class="selectopt" name="test" type="radio" id="opt5">
+		  <label for="opt5" class="option">Bin to Dec</label>
+    </div>
+
 
 	 <div id="input">
 	 	<input type="text" name="input" placeholder="Enter Here">
@@ -46,8 +55,15 @@
 	 </div>		
 
 	 <div id="output">
-	     <p>output</p>
-	     <div>preview</div>
+	     <div id="description">
+	     	<p id="answer">LOREM IPSUM</p>
+	     	<i class="fa fa-clone" aria-hidden="true"></i>
+
+	     </div>
+	     <div id="preview">
+	     		<!-- the color box -->
+
+	     </div>
 	 </div>
 </section> 
 
@@ -56,3 +72,4 @@
 
 
 </body>
+<!-- <i class="fa fa-chevron-down" aria-hidden="true"></i> -->
