@@ -1,0 +1,120 @@
+// header-----------------------------------------------------------------------
+
+.header{
+    @include flexCenter(coloumn);
+
+    #{&}__heading{
+        margin: 0 100%;
+        font-family: 'Londrina Solid', cursive;
+        font-weight: map-get($fontWeight, normal);
+        letter-spacing: 2px;
+        font-size: map-get($fontSize, large);
+        border-bottom:5px solid #111111;
+    }
+   
+    #{&}__para{
+        width: 60%;
+        color: $white;
+        background-color: $black;
+        opacity: 0.7;
+        padding: 2rem;
+        @include style;
+    }
+    
+}
+
+//section-------------------------------------------------------------------
+
+.section{
+    @include flexCenter(coloumn);
+    margin: 0 100%;
+
+    .dropDown{
+        @include flexCenter(coloumn);
+        position: relative;
+        width:250px;
+        height:40px;
+
+        .option {
+            @include flexCenter(coloumn);
+            padding:0 30px 0 10px;
+            appearance: none;
+            background-color: $white;
+            min-height:40px;
+            position:absolute;
+            width: 100%;
+            pointer-events:none;
+            order:2;
+            z-index:1;
+            transition:background .4s ease-in-out;
+          }
+        
+        input:checked + label{
+            order: 1;
+            z-index:2;
+            border-top:none;
+            position:relative;
+        }  
+
+        input:checked + label:after {
+            content:'';
+            width: 0; 
+            height: 0; 
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 6px solid black;
+            position:absolute;
+            right:10px;
+            top:calc(50% - 2.5px);
+              pointer-events:none;
+              z-index:3;
+        }
+
+
+        
+    }
+
+    .dropDown:focus .option{
+        position:relative;
+        pointer-events:all;
+    }
+
+    .dropDown:focus{
+        outline:none;
+    }
+
+    
+
+}
+
+// input------------------------------------------------------------------------
+
+.input{
+    background-color: $white;
+    @include flexCenter(coloumn);
+    flex-wrap: nowrap;
+    
+    i{
+        height: 32px;
+        background-color:var(--div-background-light);
+        padding: 6px;
+    }
+    i:hover{
+    background-color: #828288;
+    }
+}
+
+
+input{
+	background-color:$white;
+	width: 20rem;
+	height: 2rem;
+	padding:0 5px;
+	font-weight: map-get($fontWeight, bold);
+	font-size: map-get($fontSize, small );
+	border:none;
+
+}
+select,input:focus{
+	outline: none;
+}

@@ -1,75 +1,66 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-	  <title>RGBeX</title>
-	  <meta charset="utf-8">
-	  <meta name="description" content="Convert RGB values to Hexadecimal>
-	  <meta name="keywords" content="HTML, CSS, RGB to Hex , RGB , Hex, Hex to RGB, Web Development">
-	  <meta name="author" content="Hardik Chopra">
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <link rel="icon" type="image/x-icon" href="logo.png">
+	<title>RGBeX</title>
+	<meta charset="utf-8">
+    <meta name="description" content="Convert RGB values to Hexadecimal">
+    <meta name="keywords" content="HTML, CSS, RGB to Hex , RGB , Hex, Hex to RGB, Web Development">
+	<meta name="author" content="Hardik Chopra">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="logo.png">
     
 
-      <!-- CSS file -->
-	  <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- CSS file -->
+	<link rel="stylesheet" type="text/css" href="dist/css/main.css">
 
-      <!-- Fonts and Icons -->
-     <link rel="preconnect" href="https://fonts.gstatic.com">
-     <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap" rel="stylesheet">  
-	  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
-	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Fonts and Icons -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap" rel="stylesheet">  
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       
 </head>
 <body>
 
 <!-- Header -->
-<header>	
-	<h1 id="name">RGBeX</h1> <hr>
-	<p id="greet">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+<header class="header">	
+	<h1 class="header__heading" >RGBeX</h1> <hr>
+	<p class="header__para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
 </header>
 
 <!-- UserInput-->
-<section>
+<section class="section">
     
-    <div class="select" tabindex="1">
-		  <input class="selectopt" name="test" type="radio" id="opt1" checked>
+    <div class="dropDown" tabindex="1">
+		  <input class="option" name="test" type="radio" id="opt1" checked>
 		  <label for="opt1" class="option">Hex to RGB</label>
-		  <input class="selectopt" name="test" type="radio" id="opt2">
+		  <input class="option" name="test" type="radio" id="opt2">
 		  <label for="opt2" class="option">Hex to RGB</label>
-		  <input class="selectopt" name="test" type="radio" id="opt3">
+		  <input class="option" name="test" type="radio" id="opt3">
 		  <label for="opt3" class="option">RGB to Hex</label>
-		  <input class="selectopt" name="test" type="radio" id="opt4">
+		  <input class="option" name="test" type="radio" id="opt4">
 		  <label for="opt4" class="option">Dec to Bin</label>
-		  <input class="selectopt" name="test" type="radio" id="opt5">
+		  <input class="option" name="test" type="radio" id="opt5">
 		  <label for="opt5" class="option">Bin to Dec</label>
     </div>
 
 
-	 <div id="input">
+	<div class="input">
 	 	<input type="text" name="input" placeholder="Enter Here">
 	 	<i class="fa fa-search" aria-hidden="true"></i>
+	</div>		
 
-	 </div>		
-
-	 <div id="output">
-	     <div id="description">
-	     	<p id="answer">LOREM IPSUM</p>
+	<div class="output">
+	    <div class="description">
+	     	<p class="answer">LOREM IPSUM</p>
 	     	<i class="fa fa-clone" aria-hidden="true"></i>
-
-	     </div>
-	     <div id="preview">
+	    </div>
+	    <div class="preview">
 	     		<!-- the color box -->
-
-	     </div>
-	 </div>
+	    </div>
+	</div>
 </section> 
-
-
-
-
-
 </body>
-<!-- <i class="fa fa-chevron-down" aria-hidden="true"></i> -->
