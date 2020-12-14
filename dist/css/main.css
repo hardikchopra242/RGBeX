@@ -106,79 +106,17 @@ body {
   text-align: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  border-radius: 5px;
   position: relative;
-  width: 250px;
-  height: 40px;
-}
-
-.section .dropDown .option {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: coloumn;
-          flex-direction: coloumn;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding: 0 30px 0 10px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  width: 15rem;
+  height: 3rem;
   background-color: #d9d9d9;
-  min-height: 40px;
-  position: absolute;
-  width: 100%;
-  pointer-events: none;
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-  z-index: 1;
-  -webkit-transition: background .4s ease-in-out;
-  transition: background .4s ease-in-out;
-}
-
-.section .dropDown input:checked + label {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  z-index: 2;
-  border-top: none;
-  position: relative;
-}
-
-.section .dropDown input:checked + label:after {
-  content: '';
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 6px solid black;
-  position: absolute;
-  right: 10px;
-  top: calc(50% - 2.5px);
-  pointer-events: none;
-  z-index: 3;
-}
-
-.section .dropDown:focus .option {
-  position: relative;
-  pointer-events: all;
-}
-
-.section .dropDown:focus {
-  outline: none;
+  font-size: 20px;
+  border: none;
 }
 
 .input {
-  background-color: #d9d9d9;
+  border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -195,6 +133,7 @@ body {
   text-align: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  background-color: #d9d9d9;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
 }
@@ -210,6 +149,7 @@ body {
 }
 
 input {
+  border-radius: 5px;
   background-color: #d9d9d9;
   width: 20rem;
   height: 2rem;
@@ -221,5 +161,73 @@ input {
 
 select, input:focus {
   outline: none;
+}
+
+.output {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: coloumn;
+          flex-direction: coloumn;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  background-color: #1b1b1b;
+  width: 200px;
+  height: 150px;
+}
+
+.output .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: coloumn;
+          flex-direction: coloumn;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.output .description .answer {
+  background-color: #1b1b1b;
+}
+
+.output .description .fa-clone {
+  color: #d9d9d9;
+}
+
+.output .description .fa-clone:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.output .preview {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  min-height: 50px;
+  background-color: #d9d9d9;
 }
 /*# sourceMappingURL=main.css.map */

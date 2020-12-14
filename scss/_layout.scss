@@ -31,67 +31,25 @@
 
     .dropDown{
         @include flexCenter(coloumn);
+        @include style;
         position: relative;
-        width:250px;
-        height:40px;
+        width:15rem;
+        height:3rem;
+        background-color:$white;
+        font-size: map-get($fontSize,small);
+        border: none;
 
-        .option {
-            @include flexCenter(coloumn);
-            padding:0 30px 0 10px;
-            appearance: none;
-            background-color: $white;
-            min-height:40px;
-            position:absolute;
-            width: 100%;
-            pointer-events:none;
-            order:2;
-            z-index:1;
-            transition:background .4s ease-in-out;
-          }
-        
-        input:checked + label{
-            order: 1;
-            z-index:2;
-            border-top:none;
-            position:relative;
-        }  
-
-        input:checked + label:after {
-            content:'';
-            width: 0; 
-            height: 0; 
-            border-left: 6px solid transparent;
-            border-right: 6px solid transparent;
-            border-top: 6px solid black;
-            position:absolute;
-            right:10px;
-            top:calc(50% - 2.5px);
-              pointer-events:none;
-              z-index:3;
-        }
-
-
-        
     }
 
-    .dropDown:focus .option{
-        position:relative;
-        pointer-events:all;
-    }
-
-    .dropDown:focus{
-        outline:none;
-    }
-
-    
 
 }
 
 // input------------------------------------------------------------------------
 
 .input{
-    background-color: $white;
+    @include style;
     @include flexCenter(coloumn);
+    background-color: $white;
     flex-wrap: nowrap;
     
     i{
@@ -106,6 +64,7 @@
 
 
 input{
+    @include style;
 	background-color:$white;
 	width: 20rem;
 	height: 2rem;
@@ -118,3 +77,43 @@ input{
 select,input:focus{
 	outline: none;
 }
+
+// output---------------------------------------------------------------------------
+
+.output{
+    @include flexCenter(coloumn);
+    flex-basis: 100%;
+    background-color: $black;
+    width: 200px;
+    height: 150px;
+
+    
+    .description{
+           
+            @include flexCenter(coloumn);
+            flex-basis: 100%;
+            justify-content: space-between;
+
+            .answer{
+                background-color: $black;
+            }
+
+            .fa-clone{
+                color: $white;
+            }
+            .fa-clone:hover{
+                transform: scale(1.1);
+            }
+        }
+
+        
+        .preview{
+            flex-basis: 100%;
+            min-height: 50px;
+            background-color: $white;
+        }
+    
+    
+}
+
+//Problem : In small screen size the options are too big for the screen / reduce the size
