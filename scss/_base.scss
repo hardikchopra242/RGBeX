@@ -9,19 +9,6 @@ html{
     scroll-behavior: smooth;
 }
 
-//Gives flex properties with centered layout given the flex direction
-@mixin flexCenter($direction) {
-    display: flex;
-    flex-direction: $direction ;
-    justify-content: center;
-    align-items: center;
-    text-align:center;
-    flex-wrap: wrap;
-}
-
-@mixin style {
-    border-radius:5px;
-}
 
 .wrapper{
     @include flexCenter(coloumn);
@@ -36,7 +23,7 @@ html{
 }
 
 
-/*to the top button*/
+/*to the top button ----------------------------------------------------------------- */
 .toTop{
 	position: fixed;
 	display: block;
@@ -80,3 +67,5 @@ html{
 	50%{opacity: 0.5;}
 	100%{opacity: 1;}
 }
+
+// ------------------------------------------------------------------------------------------

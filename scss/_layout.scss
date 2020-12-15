@@ -3,8 +3,6 @@
 .header{
     @include flexCenter(coloumn);
 
-    // transform: translateY(-35px);
-
     #{&}__heading{
         margin: 0 100%;
         font-family: 'Londrina Solid', cursive;
@@ -119,6 +117,7 @@ select,input:focus{
 
         
         .preview{
+            // display: none;
             @include style;
             flex-basis: 100%;
             min-height: 50px;
@@ -168,24 +167,6 @@ select,input:focus{
         
     }
 }
-
-
-
-
-// .footer::before{
-// 	padding: 0;
-// 	margin:0;
-// }
-
-
-
-
-
-
-
-// a{
-// 	// text-decoration: none;
-// }
 
 
 //Problem : In small screen size the options are too big for the screen / reduce the size
