@@ -1,3 +1,19 @@
+// to the top button
+const toTop =  document.querySelector(".toTop");
+// console.log(toTop);
+
+
+window.addEventListener('scroll',() =>{
+if(window.pageYOffset < 100){
+	toTop.style.display = 'block'
+}
+else
+	toTop.style.display = 'none';
+
+})
+
+
+
 //Function to convert Hexadecimal to Decimal code 
 //first we will make a decimal to hexadecimal and hexadecimal to decimal program
 // We are known to the fact that A hex can be easily converted to a Binary because it is the simple binary concatenation

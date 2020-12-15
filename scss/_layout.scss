@@ -41,6 +41,7 @@
         background-color:$white;
         font-size: map-get($fontSize,small);
         border: none;
+        padding-left: 0.4rem;;
 
     }
 
@@ -109,10 +110,10 @@ select,input:focus{
 
             .fa-clone{
                 color: $white;
-                transition:0.1s;
+                transition:0.3s;
             }
             .fa-clone:hover{
-                transform: scale(1.4);
+                transform: scale(1.2);
             }
         }
 
@@ -126,5 +127,65 @@ select,input:focus{
     
     
 }
+
+//Footer
+
+.footer{
+    background-color:#0c0c0c;
+	text-align: center;
+	margin: auto 0;
+	padding-top: 5rem;
+    padding-bottom: 5rem;
+    color: $white;
+    
+    p:nth-child(1){
+        font-weight: lighter;
+        font-size: 2rem;
+    }
+    
+     p:nth-child(2){
+        margin: 2rem 0 1rem 0;
+        font-size: 1.5rem;
+        font-weight:normal;
+    
+    }
+
+    a{
+        font-size: 2rem;
+        color: $white;
+        text-decoration: none;
+        margin: 0 0.7rem;
+    }
+
+    #end{
+        text-align: center;
+        padding: 2rem 2rem 0rem 2rem;
+
+        #repoLink{
+            font-size:map-get($fontSize , small);
+            margin:0 0.3rem;
+        }
+        
+    }
+}
+
+
+
+
+// .footer::before{
+// 	padding: 0;
+// 	margin:0;
+// }
+
+
+
+
+
+
+
+// a{
+// 	// text-decoration: none;
+// }
+
 
 //Problem : In small screen size the options are too big for the screen / reduce the size

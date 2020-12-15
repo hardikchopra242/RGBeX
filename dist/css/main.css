@@ -6,7 +6,11 @@
   font-family: "Comfortaa", cursive;
 }
 
-body {
+html {
+  scroll-behavior: smooth;
+}
+
+.wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,6 +37,74 @@ body {
   background-position: center center;
   height: 100vh;
   background-attachment: fixed;
+}
+
+/*to the top button*/
+.toTop {
+  position: fixed;
+  display: block;
+  z-index: 11;
+  width: 50px;
+  height: 50px;
+  bottom: 20px;
+  right: 20px;
+  border: 2px solid #16191C;
+  line-height: 50px;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 30px;
+  background-color: #16191C;
+  color: #d9d9d9;
+  -webkit-animation: showTop 0.7s ease-in;
+          animation: showTop 0.7s ease-in;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.toTop a {
+  text-decoration: none;
+}
+
+.toTop a:active {
+  color: #d9d9d9;
+}
+
+.toTop a:visited {
+  color: #d9d9d9;
+}
+
+.toTop a:select {
+  text-decoration: none;
+}
+
+.toTop:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: 0.8;
+}
+
+@-webkit-keyframes showTop {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showTop {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .header {
@@ -117,6 +189,7 @@ body {
   background-color: #d9d9d9;
   font-size: 20px;
   border: none;
+  padding-left: 0.4rem;
 }
 
 .input {
@@ -226,13 +299,13 @@ select, input:focus {
 
 .output .description .fa-clone {
   color: #d9d9d9;
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .output .description .fa-clone:hover {
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .output .preview {
@@ -241,5 +314,42 @@ select, input:focus {
       flex-basis: 100%;
   min-height: 50px;
   background-color: #d9d9d9;
+}
+
+.footer {
+  background-color: #0c0c0c;
+  text-align: center;
+  margin: auto 0;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  color: #d9d9d9;
+}
+
+.footer p:nth-child(1) {
+  font-weight: lighter;
+  font-size: 2rem;
+}
+
+.footer p:nth-child(2) {
+  margin: 2rem 0 1rem 0;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.footer a {
+  font-size: 2rem;
+  color: #d9d9d9;
+  text-decoration: none;
+  margin: 0 0.7rem;
+}
+
+.footer #end {
+  text-align: center;
+  padding: 2rem 2rem 0rem 2rem;
+}
+
+.footer #end #repoLink {
+  font-size: 20px;
+  margin: 0 0.3rem;
 }
 /*# sourceMappingURL=main.css.map */
