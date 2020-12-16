@@ -1,6 +1,3 @@
-
-
-
 //Function to convert Hexadecimal to Decimal code 
 //first we will make a decimal to hexadecimal and hexadecimal to decimal program
 // We are known to the fact that A hex can be easily converted to a Binary because it is the simple binary concatenation
@@ -13,15 +10,14 @@
 //Note: We need a 4 digit binary number so we have to fill the empty spaces with zero's
 const decToBin = (num) => {
   let bin;
-  bin = num.toString(2); // A string
-  // console.log("string : ",bin);
+  if(num<0)
+  throw Error(`Enter a positive number`);
+
+  bin = num.toString(2); // converstion to binary in string 
   bin=bin.padStart(8,0);
-  // console.log("after padding : ",bin);
-  // bin = parseInt(bin); //Integer value
-  // console.log("into int : ",bin);
     return bin;
   }
-
+//In dec to bin while converting user input from string to a number check if the number is valid or not only then parse the function
 
 
 //Bin To Dec
@@ -32,12 +28,17 @@ const binToDec = (bin) => {
     let temp=0;
       for(let i=0 ; bin!==0 ; i++){
        temp=bin%10;
+       if(temp!==1 && temp!==0){
+         throw Error(`Enter a valid binary number`);
+       }
        if(temp===1){
         dec=dec+(2**i);}
         bin=parseInt(bin/10);
-      }   
+      }  
       return dec;
     }
+
+
 //Hex to Bin 
 //Input : String
 //Output: String
@@ -157,3 +158,33 @@ return hex;
 
 // error for RGBtoHex[255,255,256]
 // error for HextoRGb('-1')
+
+
+
+// ---------------------------------------------------------------------------------------------------------
+// Main function from here
+
+// DROPDOWN-------------------------------------------------------------------------
+
+let dropDown = document.querySelector(`select`);
+let current;// Current will store the current value of drop down
+
+// INPUT---------------------------------------------------------------------------
+let inputField = document.querySelector(`input`);
+
+// SEARCH BUTTON-------------------------------------------------------------------
+let search = document.querySelector(`.fa-search`);
+
+//Event Listener to store current state
+dropDown.addEventListener(`change`, () => {current = dropDown.value});
+
+// Function to return the user input as a string
+const userInput = () => {return inputField.value;};
+
+//Event Listener for search button
+search.addEventListener(`click`, ()=>{
+  let inp = userInput();
+  mainFunc(inp,current);
+});
+
+//Make a main function to treat the user input and the current to produce some outputs
