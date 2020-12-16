@@ -352,4 +352,26 @@ select, input:focus {
   font-size: 20px;
   margin: 0 0.3rem;
 }
+
+@media (max-width: 550px) {
+  .header .header__para {
+    font-size: 15px;
+  }
+  .section .dropDown {
+    font-size: 15px;
+  }
+  input {
+    font-size: 15px;
+  }
+  .footer p:nth-child(1), .footer a {
+    font-size: 20px;
+    margin: 0 0.3rem;
+  }
+  .footer p:nth-child(2) {
+    font-size: 15px;
+  }
+  .footer #end #repoLink {
+    font-size: 15px;
+  }
+}
 /*# sourceMappingURL=main.css.map */

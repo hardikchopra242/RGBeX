@@ -168,5 +168,39 @@ select,input:focus{
     }
 }
 
+//Media-Query
+@media (max-width:550px){
+    
+    .header{
+        #{&}__para{
+            font-size: 15px;
+        }
+    }
+    
+    .section{
+        .dropDown{
+            font-size: 15px;
+        }
+    }
 
-//Problem : In small screen size the options are too big for the screen / reduce the size
+
+    input{
+       font-size: 15px;
+    }
+
+    .footer{
+        p:nth-child(1),a{
+            font-size: 20px;
+            margin: 0 0.3rem;
+        }
+        p:nth-child(2){
+            font-size: 15px;
+        }
+        #end{
+            #repoLink{
+                font-size: 15px;
+            }
+        }
+       
+    }
+}
