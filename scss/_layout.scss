@@ -104,6 +104,19 @@ select,input:focus{
             .answer{
                
                 opacity: 0.8;
+                width:85%;
+                height: 50px;
+                resize: none;
+                border:2px solid red;
+                text-align: center;
+                line-height:50px;
+                font-size: map-get($fontSize, small );
+                font-weight: map-get($fontWeight, normal);
+                overflow: hidden;
+                
+            }
+            .answer:focus{
+                outline: none;
             }
 
             .fa-clone{
@@ -136,6 +149,7 @@ select,input:focus{
 	padding-top: 5rem;
     padding-bottom: 5rem;
     color: $white;
+
     
     p:nth-child(1){
         font-weight: lighter;

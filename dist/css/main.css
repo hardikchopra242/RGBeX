@@ -295,6 +295,19 @@ select, input:focus {
 
 .output .description .answer {
   opacity: 0.8;
+  width: 85%;
+  height: 50px;
+  resize: none;
+  border: 2px solid red;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  overflow: hidden;
+}
+
+.output .description .answer:focus {
+  outline: none;
 }
 
 .output .description .fa-clone {

@@ -5,10 +5,11 @@
 
 
 // Dec to Bin   
-//Input : Integer
+//Input : String
 //Output: String
 //Note: We need a 4 digit binary number so we have to fill the empty spaces with zero's
 const decToBin = (num) => {
+  num = Number(num);
   let bin;
   if(num<0)
   throw Error(`Enter a positive number`);
@@ -21,9 +22,11 @@ const decToBin = (num) => {
 
 
 //Bin To Dec
-//Input : Integer
+//Input : String
 //Output: Integer 
 const binToDec = (bin) => {
+    
+    bin = Number(bin);
     let dec = 0;  
     let temp=0;
       for(let i=0 ; bin!==0 ; i++){
@@ -163,28 +166,74 @@ return hex;
 
 // ---------------------------------------------------------------------------------------------------------
 // Main function from here
-
-// DROPDOWN-------------------------------------------------------------------------
-
-let dropDown = document.querySelector(`select`);
-let current;// Current will store the current value of drop down
-
-// INPUT---------------------------------------------------------------------------
+let dropDown = document.querySelector(`select`); 
 let inputField = document.querySelector(`input`);
-
-// SEARCH BUTTON-------------------------------------------------------------------
-let search = document.querySelector(`.fa-search`);
+let outputField = document.querySelector(`.answer`);
+let search = document.querySelector(`.fa-search`); 
+let copyButton = document.querySelector(`.fa-clone`);
 
 //Event Listener to store current state
+let current = `Hex to RGB`;   // Current will store the current value of drop down
 dropDown.addEventListener(`change`, () => {current = dropDown.value});
 
-// Function to return the user input as a string
+// Function to fetch user input
 const userInput = () => {return inputField.value;};
 
 //Event Listener for search button
+
 search.addEventListener(`click`, ()=>{
   let inp = userInput();
   mainFunc(inp,current);
 });
 
+inputField.addEventListener(`keypress` , (e)=>{
+if (e.key === 'Enter') {
+      let inp = userInput();
+      mainFunc(inp,current);
+    }
+
+});
+
+//Copy Button
+copyButton.addEventListener("click", function(){
+   var copyText = outputField;
+   copyText.select() ;
+   document.execCommand("Copy");
+   alert("Copied to clipboard!");
+ });
+
+
 //Make a main function to treat the user input and the current to produce some outputs
+
+const mainFunc = (inp,current) => {
+    
+    let output;
+
+    switch (current) {
+
+    case `Dec to Bin` : output = decToBin(inp) ;break;
+    case `Bin to Dec` : output = binToDec(inp) ;break;
+    case `RGB to Hex` : output = RGBToHex(inp) ;break;
+    case `Hex to RGB` : output = hexToRgb(inp) ;break;  
+    default : console.log(`ohno`);
+
+    }
+    console.log(output);
+    showOutput(output);
+
+};
+
+// Show Output -----------------------
+const showOutput = (output) => {
+       inputField.innerText=``;
+       outputField.innerText=output;
+}
+
+
+
+
+
+
+
+
+
