@@ -63,6 +63,13 @@
     i:hover{
     background-color: #828288;
     }
+
+    .octothorp{
+        padding-left: 3px;
+        font-weight: map-get($fontWeight, bold);
+	    font-size: map-get($fontSize, small );
+
+    }
 }
 
 

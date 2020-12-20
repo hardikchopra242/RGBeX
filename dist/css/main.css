@@ -226,6 +226,12 @@ html {
   background-color: #828288;
 }
 
+.input .octothorp {
+  padding-left: 3px;
+  font-weight: 900;
+  font-size: 20px;
+}
+
 input {
   border-radius: 5px;
   background-color: #d9d9d9;

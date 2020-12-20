@@ -71,7 +71,7 @@ const binToDec = (bin) => {
       case `e`: return `1110`; 
       case `F`:
       case `f`: return `1111`;
-      default: console.log("Not a valid hex");
+      default : return 0 ;
         break;
     }
   }
@@ -203,6 +203,33 @@ isPreview = () => {    //this is not working, something freaky about the css/scs
 
 }
 
+//hex to rgb
+ToRgb = (inp) => {
+  if(inp.length<6){
+    alert(`enter a valid hex`);
+    return;
+  }
+
+  let value =  hexToRgb(inp);
+  return `rgb( ${value} )`;
+}
+
+//RGB to Hex
+ToHex = (inp) => {      //inp = "1,1,1"
+  let stringArray = inp.split(","); //["1","1","1"];
+  let array = stringArray.map( item => Number(item));  //[1,1,1]
+  let check = array.filter( item => item>225 || Number.isNaN(item));
+  console.log(check);
+  if(check.length!=0){
+    alert(`enter a valid RGB value`);
+    return;
+  }
+
+  value = RGBToHex(array);
+  return value;
+}
+
+
 //set state to none or block
 setPreview = (state) => {
   // console.log(`asasas`);
@@ -212,6 +239,20 @@ setPreview = (state) => {
 //set value to rgb  or hex code
 setPreviewColor = (value) => {
   preview.style.background = value;
+}
+
+//maxlength for the input field
+setMaxlength = (n) => {
+  inputField.setAttribute("maxlength",n);
+}
+
+//minlength for the input field
+setMinlength = (n) => {
+  inputField.setAttribute("minlength",n);
+}
+
+setOctothorp = (state) => {
+  octothorp.style.display = state;
 }
 
 
@@ -227,10 +268,26 @@ let outputField = document.querySelector(`.answer`);
 let search = document.querySelector(`.fa-search`); 
 let copyButton = document.querySelector(`.fa-clone`);
 let preview = document.querySelector(`.preview`);
+let octothorp = document.querySelector(`.octothorp`);
 
 //Event Listener to store current state
 let current = `Hex to RGB`;   // Current will store the current value of drop down
-dropDown.addEventListener(`change`, () => {current = dropDown.value});
+dropDown.addEventListener(`change`, () => {
+  current = dropDown.value;
+
+  if(current === `Hex to RGB`)
+  { 
+    setMinlength(6);
+    setMaxlength(6);
+    setOctothorp(`block`);
+  }
+  else{
+    setMinlength();
+    setMaxlength();
+    setOctothorp(`none`);
+  }
+
+});
 
 // Function to fetch user input
 const userInput = () => {return inputField.value;};
@@ -269,8 +326,8 @@ const mainFunc = (inp,current) => {
 
     case `Dec to Bin` : output = ToBin(inp) ;break;
     case `Bin to Dec` : output = ToDec(inp) ;break;
-    case `RGB to Hex` : output = RGBToHex(inp) ;break;
-    case `Hex to RGB` : output = hexToRgb(inp) ;break;  
+    case `RGB to Hex` : output = ToHex(inp) ;break;
+    case `Hex to RGB` : output = ToRgb(inp) ;break;  
     default : console.log(`ohno`);
 
     }
