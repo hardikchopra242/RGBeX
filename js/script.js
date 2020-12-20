@@ -5,11 +5,11 @@
 
 
 // Dec to Bin   
-//Input : String
+//Input : Number
 //Output: String
 //Note: We need a 4 digit binary number so we have to fill the empty spaces with zero's
 const decToBin = (num) => {
-  num = Number(num);
+  // num = Number(num); 
   let bin;
   if(num<0)
   throw Error(`Enter a positive number`);
@@ -32,6 +32,7 @@ const binToDec = (bin) => {
       for(let i=0 ; bin!==0 ; i++){
        temp=bin%10;
        if(temp!==1 && temp!==0){
+         alert(`Enter a valid binary number`);
          throw Error(`Enter a valid binary number`);
        }
        if(temp===1){
@@ -163,6 +164,60 @@ return hex;
 // error for HextoRGb('-1')
 
 
+//Functions to maniplate IP/OP for the simple functions
+
+//Dec to Bin
+ToBin = (inp) => {
+
+  setPreview(`none`);
+
+  inp = Number(inp);
+
+  if(inp<0)
+  return alert(`enter a positive number`);
+
+  else if(inp===0)
+  return 0;
+  
+  else if(!inp)
+  return alert(`enter a valid decimal number`);
+
+  else if(inp>10000000)
+  return alert(`Try a smaller integer`);
+   
+  return decToBin(inp);
+}
+
+//Bin to Dec
+ToDec = (inp) => {
+  setPreview(`none`);
+  return binToDec(inp); 
+}
+
+isPreview = () => {    //this is not working, something freaky about the css/scss
+  if(preview.style.display === "")
+  return 0;
+
+  else
+  return 1;
+
+}
+
+//set state to none or block
+setPreview = (state) => {
+  // console.log(`asasas`);
+  preview.style.display = state;
+}
+
+//set value to rgb  or hex code
+setPreviewColor = (value) => {
+  preview.style.background = value;
+}
+
+
+
+
+
 
 // ---------------------------------------------------------------------------------------------------------
 // Main function from here
@@ -171,6 +226,7 @@ let inputField = document.querySelector(`input`);
 let outputField = document.querySelector(`.answer`);
 let search = document.querySelector(`.fa-search`); 
 let copyButton = document.querySelector(`.fa-clone`);
+let preview = document.querySelector(`.preview`);
 
 //Event Listener to store current state
 let current = `Hex to RGB`;   // Current will store the current value of drop down
@@ -211,8 +267,8 @@ const mainFunc = (inp,current) => {
 
     switch (current) {
 
-    case `Dec to Bin` : output = decToBin(inp) ;break;
-    case `Bin to Dec` : output = binToDec(inp) ;break;
+    case `Dec to Bin` : output = ToBin(inp) ;break;
+    case `Bin to Dec` : output = ToDec(inp) ;break;
     case `RGB to Hex` : output = RGBToHex(inp) ;break;
     case `Hex to RGB` : output = hexToRgb(inp) ;break;  
     default : console.log(`ohno`);
@@ -225,8 +281,11 @@ const mainFunc = (inp,current) => {
 
 // Show Output -----------------------
 const showOutput = (output) => {
-       inputField.innerText=``;
+      //  inputField.innerText=``;   //wanted here to clear the input, soon the output printed 
+      if(output === 0 || output )
        outputField.innerText=output;
+      else
+      alert(`???`); 
 }
 
 

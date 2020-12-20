@@ -130,7 +130,7 @@ select,input:focus{
 
         
         .preview{
-            // display: none;
+            display:none;
             @include style;
             flex-basis: 100%;
             min-height: 50px;

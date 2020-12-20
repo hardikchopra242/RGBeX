@@ -322,6 +322,7 @@ select, input:focus {
 }
 
 .output .preview {
+  display: none;
   border-radius: 5px;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
