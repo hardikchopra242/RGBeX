@@ -4,25 +4,22 @@
 // of single entites
 
 
-// Dec to Bin   
+  
 //Input : Number
 //Output: String
 //Note: We need a 4 digit binary number so we have to fill the empty spaces with zero's
 const decToBin = (num) => {
-  // num = Number(num); 
   let bin;
   if(num<0){
-  alert(`Enter a  positive number`);
+  alert(`Enter a Positive Number !`);
   throw Error(`Enter a positive number`);}
 
   bin = num.toString(2); // converstion to binary in string 
   bin=bin.padStart(8,0);
     return bin;
   }
-//In dec to bin while converting user input from string to a number check if the number is valid or not only then parse the function
 
 
-//Bin To Dec
 //Input : String
 //Output: Integer 
 const binToDec = (bin) => {
@@ -33,7 +30,7 @@ const binToDec = (bin) => {
       for(let i=0 ; bin!==0 ; i++){
        temp=bin%10;
        if(temp!==1 && temp!==0){
-         alert(`Enter a valid binary number`);
+         alert(`Enter a valid Binary Number`);
          throw Error(`Enter a valid binary number`);
        }
        if(temp===1){
@@ -44,10 +41,8 @@ const binToDec = (bin) => {
     }
 
 
-//Hex to Bin 
 //Input : String
 //Output: String
-//we will store all the binary equivalents of the hex to bin with conditions
   const hexToBin = (hex) => {
     switch (hex) {
       case `0`: return `0000`;
@@ -102,11 +97,9 @@ const binToDec = (bin) => {
     }
   }
 
-//Function to convert Hexadecimal code to RGB values
+
 //Input : String
 //Return: Array of Integers 
-//Note: the code should be of 6 digits
-//The 'code' would be a string
 const hexToRgb = (code) => {
 let red,green,blue;
 let one,two;
@@ -115,7 +108,7 @@ one = hexToBin(code[0]); //Both one and two are strings
 two = hexToBin(code[1]);
 
 if (isNaN(one) || isNaN(two))
-{alert(`Enter a valid Hex`);
+{alert(`Enter a valid Hex Code`);
 return;}
 
 red = parseInt(one.concat(two)); //A binary number for red
@@ -124,7 +117,7 @@ one = hexToBin(code[2]); //Both one and two are strings
 two = hexToBin(code[3]);
 
 if (isNaN(one) || isNaN(two))
-{alert(`Enter a valid Hex`);
+{alert(`Enter a valid Hex Code`);
 return;}
 
 green = parseInt(one.concat(two)); //A binary number for green
@@ -133,18 +126,18 @@ one = hexToBin(code[4]); //Both one and two are strings
 two = hexToBin(code[5]);
 
 if (isNaN(one) || isNaN(two))
-{alert(`Enter a valid Hex`);
+{alert(`Enter a valid Hex Code`);
 return;}
 
 blue = parseInt(one.concat(two)); //A binary number for blue
+
 //We have to return an array with comma seperated DECIMAL values...
 return [binToDec(red),binToDec(green),binToDec(blue)];
 }
 
-//Function to convert RGB to hexadecimal
+
 //Input : Array of Integers
 //Return: String 
-//Input will be an array of three decimal numbers and return value would a string 
 RGBToHex = (colors) => {
 let red,green,blue; //will store the binary representations
 red = decToBin(colors[0]);
@@ -153,29 +146,23 @@ blue = decToBin(colors[2]);
 
 let hex="#";
 let x = binToHex(red.substr(0,4));
-hex = hex.concat(x); //console.log(hex);
+hex = hex.concat(x); 
 x =  binToHex(red.substr(4,8));
-hex = hex.concat(x); //console.log(hex);
+hex = hex.concat(x); 
 x = binToHex(green.substr(0,4));
-hex = hex.concat(x); //console.log(hex);
+hex = hex.concat(x); 
 x = binToHex(green.substr(4,8));
-hex = hex.concat(x); //console.log(hex);
+hex = hex.concat(x); 
 x =  binToHex(blue.substr(0,4));
-hex = hex.concat(x); //console.log(hex);
+hex = hex.concat(x); 
 x = binToHex(blue.substr(4,8)) ;
-hex = hex.concat(x); //console.log(hex);
+hex = hex.concat(x); 
 
 console.log(hex);
 return hex;
 }
 
-//The Scope of Improvement
-// we can reduce the size of the program by merging the hexToBin and binToHex function into
-// one by using object and key value pairs.
-
-// error for RGBtoHex[255,255,256]
-// error for HextoRGb('-1')
-
+//----------------------------------------------------------------------------------------------
 
 //Functions to maniplate IP/OP for the simple functions
 
@@ -192,13 +179,13 @@ ToBin = (inp) => {
   inp = Number(inp);
 
   if(inp<0)
-  return alert(`enter a positive number`);
+  return alert(`Enter a Positive Number`);
 
   else if(inp===0)
   return 0;
   
   else if(!inp)
-  return alert(`enter a valid decimal number`);
+  return alert(`Enter a valid Decimal Number`);
 
   else if(inp>10000000)
   return alert(`Try a smaller integer`);
@@ -229,7 +216,7 @@ isPreview = () => {    //this is not working, something freaky about the css/scs
 //hex to rgb
 ToRgb = (inp) => {
   if(inp.length<6){
-    alert(`enter a valid hex`);
+    alert(`Enter a valid Hex`);
     return;
   }
 
@@ -250,10 +237,9 @@ ToHex = (inp) => {      //inp = "1,1,1"
 
 
   let stringArray = inp.split(","); //["1","1","1"];
-  console.log(stringArray);
 
   //to counter the case like -> 12,,12,12
-  let stringArray2 = stringArray.filter(item => !item.length==0);console.log(stringArray2);
+  let stringArray2 = stringArray.filter(item => !item.length==0);
 
   if(stringArray.length!==3 || stringArray2.length!==3 || inp.length>11){
     alert(`Enter a valid RGB value !!!`);
@@ -262,9 +248,8 @@ ToHex = (inp) => {      //inp = "1,1,1"
 
   let array = stringArray2.map( item => Number(item));  //[1,1,1]
   let check = array.filter( item => item>255 || Number.isNaN(item));
-  console.log(check);
   if(check.length!=0){
-    alert(`enter a valid RGB value`);
+    alert(`Enter a valid RGB value`);
     return;
   }
 
@@ -276,10 +261,10 @@ ToHex = (inp) => {      //inp = "1,1,1"
   return value;
 }
 
+//---------------------------------------------------------------------------------------------
 
 //set state to none or block
 setPreview = (state) => {
-  // console.log(`asasas`);
   preview.style.display = state;
 }
 
@@ -306,6 +291,9 @@ setOctothorp = (state) => {
 updatePlaceholder = (value) => {
   inputField.setAttribute(`placeholder`, value);
 }
+
+// Function to fetch user input
+const userInput = () => {return inputField.value;};
 
 
 
@@ -352,8 +340,7 @@ dropDown.addEventListener(`change`, () => {
 
 });
 
-// Function to fetch user input
-const userInput = () => {return inputField.value;};
+
 
 //Event Listener for search button
 
@@ -370,6 +357,12 @@ if (e.key === 'Enter') {
 
 });
 
+clear.addEventListener(`click`, () => {
+  inputField.value='';
+  outputField.innerText='';
+  setPreview(`none`);
+  })
+
 //Copy Button
 copyButton.addEventListener("click", function(){
    var copyText = outputField;
@@ -377,6 +370,14 @@ copyButton.addEventListener("click", function(){
    document.execCommand("Copy");
    alert("Copied to clipboard!");
  });
+
+ // Show Output -----------------------
+const showOutput = (output) => { 
+  if(output === 0 || output )
+   outputField.innerText=output; 
+}
+
+//-----------------------------------------------------------------------------------------------
 
 
 //Make a main function to treat the user input and the current to produce some outputs
@@ -391,37 +392,16 @@ const mainFunc = (inp,current) => {
     case `Bin to Dec` : output = ToDec(inp) ;break;
     case `RGB to Hex` : output = ToHex(inp) ;break;
     case `Hex to RGB` : output = ToRgb(inp) ;break;  
-    default : console.log(`ohno`);
 
     }
-    console.log(output);
     showOutput(output);
 
 };
 
-// Show Output -----------------------
-const showOutput = (output) => {
-      //  inputField.innerText=``;   //wanted here to clear the input, soon the output printed 
-      if(output === 0 || output )
-       outputField.innerText=output;
-      // else
-      // alert(`???`); 
-}
-
-clear.addEventListener(`click`, () => {
-  inputField.value='';
-  outputField.innerText='';
-  setPreview(`none`);
-})
 
 
-
-
-
-
-
-
-
-
-//RGB to Hex
-//the problem with input of commas ---
+// Major functions
+// Sub-Major functions
+// Helping functions
+// Event Listeners
+// Main Function

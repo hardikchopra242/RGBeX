@@ -198,6 +198,7 @@ html {
 
 .section .fa-remove {
   font-size: 20px;
+  display: none;
 }
 
 .section .fa-remove:hover {
@@ -392,6 +393,8 @@ select, input:focus {
   }
   input {
     font-size: 15px;
+    width: 15rem;
+    margin: 0 10px;
   }
   .output {
     margin: 0 10px;
