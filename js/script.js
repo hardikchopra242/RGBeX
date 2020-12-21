@@ -184,7 +184,7 @@ ToBin = (inp) => {
 
   setPreview(`none`);
 
-  if(inp.split("").filter(item => item===`.`))
+  if(inp.split("").filter(item => item===`.`).length)
   {alert(`Enter a valid Integer !!!`);
    return ;
   }
