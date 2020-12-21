@@ -267,8 +267,7 @@ select, input:focus {
   border-radius: 5px;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  background-color: #1b1b1b;
-  opacity: 0.8;
+  background-color: #0c0c0c;
   width: 200px;
   height: 150px;
   padding: 10px 30px;
@@ -304,7 +303,6 @@ select, input:focus {
   width: 85%;
   height: 50px;
   resize: none;
-  border: 2px solid red;
   text-align: center;
   line-height: 50px;
   font-size: 20px;
@@ -329,11 +327,11 @@ select, input:focus {
 
 .output .preview {
   display: none;
-  border-radius: 5px;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   min-height: 50px;
   background-color: #d9d9d9;
+  border: 5px solid #d9d9d9;
 }
 
 .footer {

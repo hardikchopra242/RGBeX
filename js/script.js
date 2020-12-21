@@ -284,12 +284,9 @@ setOctothorp = (state) => {
   octothorp.style.display = state;
 }
 
-//returns 1 for NaN
-checkNan = (number) => {
-  if (number.isNaN)
-  return 1;
-  else 
-  return 0;
+//Sets placeholder value
+updatePlaceholder = (value) => {
+  inputField.setAttribute(`placeholder`, value);
 }
 
 
@@ -325,6 +322,14 @@ dropDown.addEventListener(`change`, () => {
     setMaxlength();
     setOctothorp(`none`);
   }
+
+  if(current === `RGB to Hex`){
+    updatePlaceholder(`e.g: 23,122,44`);
+  }
+  else{
+    updatePlaceholder(`Enter Here`);
+  }
+
 
 });
 

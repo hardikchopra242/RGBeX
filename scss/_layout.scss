@@ -94,8 +94,8 @@ select,input:focus{
     @include flexCenter(coloumn);
     @include style;
     flex-basis: 100%;
-    background-color: $black;
-    opacity: 0.8;
+    background-color: #0c0c0c;
+    // opacity: 0.8;
     width: 200px;
     height: 150px;
     padding:10px 30px;
@@ -114,7 +114,7 @@ select,input:focus{
                 width:85%;
                 height: 50px;
                 resize: none;
-                border:2px solid red;
+                // border:2px solid red;
                 text-align: center;
                 line-height:50px;
                 font-size: map-get($fontSize, small );
@@ -138,10 +138,11 @@ select,input:focus{
         
         .preview{
             display:none;
-            @include style;
+            // @include style;
             flex-basis: 100%;
             min-height: 50px;
             background-color: $white;
+            border: 5px solid $white;
         }
     
     
