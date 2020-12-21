@@ -45,17 +45,11 @@
     }
 
     .fa-remove{
-        // border: 2px solid red;
-        // background: #ffffff;
-        margin: 10px;
-        padding: 10px;
-        border-radius:10px;
         font-size: map-get($fontSize, small);
     }
 
     .fa-remove:hover{
-        background-color: #1b1b1b;
-        color: #ffffff;
+        background-color: #828288;
     }
 
 

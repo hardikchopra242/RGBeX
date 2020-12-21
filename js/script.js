@@ -11,8 +11,9 @@
 const decToBin = (num) => {
   // num = Number(num); 
   let bin;
-  if(num<0)
-  throw Error(`Enter a positive number`);
+  if(num<0){
+  alert(`Enter a  positive number`);
+  throw Error(`Enter a positive number`);}
 
   bin = num.toString(2); // converstion to binary in string 
   bin=bin.padStart(8,0);
@@ -182,6 +183,11 @@ return hex;
 ToBin = (inp) => {
 
   setPreview(`none`);
+
+  if(inp.split("").filter(item => item===`.`))
+  {alert(`Enter a valid Integer !!!`);
+   return ;
+  }
 
   inp = Number(inp);
 

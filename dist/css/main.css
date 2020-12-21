@@ -197,15 +197,11 @@ html {
 }
 
 .section .fa-remove {
-  margin: 10px;
-  padding: 10px;
-  border-radius: 10px;
   font-size: 20px;
 }
 
 .section .fa-remove:hover {
-  background-color: #1b1b1b;
-  color: #ffffff;
+  background-color: #828288;
 }
 
 .input {
