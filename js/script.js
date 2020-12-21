@@ -71,7 +71,7 @@ const binToDec = (bin) => {
       case `e`: return `1110`; 
       case `F`:
       case `f`: return `1111`;
-      default : return 0 ;
+      default : return NaN ;
         break;
     }
   }
@@ -109,21 +109,33 @@ const binToDec = (bin) => {
 const hexToRgb = (code) => {
 let red,green,blue;
 let one,two;
+
 one = hexToBin(code[0]); //Both one and two are strings
 two = hexToBin(code[1]);
-red = parseInt(one.concat(two)); //A binary number for red
 
+if (isNaN(one) || isNaN(two))
+{alert(`Enter a valid Hex`);
+return;}
+
+red = parseInt(one.concat(two)); //A binary number for red
 
 one = hexToBin(code[2]); //Both one and two are strings
 two = hexToBin(code[3]);
-green = parseInt(one.concat(two)); //A binary number for green
 
+if (isNaN(one) || isNaN(two))
+{alert(`Enter a valid Hex`);
+return;}
+
+green = parseInt(one.concat(two)); //A binary number for green
 
 one = hexToBin(code[4]); //Both one and two are strings
 two = hexToBin(code[5]);
+
+if (isNaN(one) || isNaN(two))
+{alert(`Enter a valid Hex`);
+return;}
+
 blue = parseInt(one.concat(two)); //A binary number for blue
-
-
 //We have to return an array with comma seperated DECIMAL values...
 return [binToDec(red),binToDec(green),binToDec(blue)];
 }
@@ -191,6 +203,11 @@ ToBin = (inp) => {
 //Bin to Dec
 ToDec = (inp) => {
   setPreview(`none`);
+
+  if(inp.length>16){
+    alert(`Try a smaller number`);
+    return;
+  }
   return binToDec(inp); 
 }
 
@@ -211,6 +228,14 @@ ToRgb = (inp) => {
   }
 
   let value =  hexToRgb(inp);
+
+  if(!value && value!==0){
+    return;
+  }
+
+  setPreview(`block`);
+  preview.style.background=`#${inp}`;
+
   return `rgb( ${value} )`;
 }
 
@@ -226,6 +251,10 @@ ToHex = (inp) => {      //inp = "1,1,1"
   }
 
   value = RGBToHex(array);
+
+  setPreview(`block`);
+  preview.style.background=value;
+
   return value;
 }
 
@@ -255,6 +284,13 @@ setOctothorp = (state) => {
   octothorp.style.display = state;
 }
 
+//returns 1 for NaN
+checkNan = (number) => {
+  if (number.isNaN)
+  return 1;
+  else 
+  return 0;
+}
 
 
 
@@ -274,6 +310,9 @@ let octothorp = document.querySelector(`.octothorp`);
 let current = `Hex to RGB`;   // Current will store the current value of drop down
 dropDown.addEventListener(`change`, () => {
   current = dropDown.value;
+
+  inputField.value="";
+  outputField.innerText="";
 
   if(current === `Hex to RGB`)
   { 
@@ -341,8 +380,8 @@ const showOutput = (output) => {
       //  inputField.innerText=``;   //wanted here to clear the input, soon the output printed 
       if(output === 0 || output )
        outputField.innerText=output;
-      else
-      alert(`???`); 
+      // else
+      // alert(`???`); 
 }
 
 
@@ -353,3 +392,9 @@ const showOutput = (output) => {
 
 
 
+
+
+
+
+//RGB to Hex
+//the problem with input of commas ---
