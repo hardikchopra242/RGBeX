@@ -31,7 +31,7 @@ html {
       -ms-flex-align: start;
           align-items: flex-start;
   background-color: #d9d9d9;
-  background-image: url("https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+  background-image: url("https://images.unsplash.com/photo-1436891620584-47fd0e565afb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -48,13 +48,13 @@ html {
   height: 50px;
   bottom: 20px;
   right: 20px;
-  border: 2px solid #16191C;
+  border: 2px solid #d9d9d9;
   line-height: 50px;
   text-align: center;
   font-size: 30px;
   border-radius: 30px;
-  background-color: #16191C;
-  color: #d9d9d9;
+  background-color: #d9d9d9;
+  color: #1b1b1b;
   -webkit-animation: showTop 0.7s ease-in;
           animation: showTop 0.7s ease-in;
   -webkit-transition: 0.3s;
@@ -66,11 +66,11 @@ html {
 }
 
 .toTop a:active {
-  color: #d9d9d9;
+  color: #1b1b1b;
 }
 
 .toTop a:visited {
-  color: #d9d9d9;
+  color: #1b1b1b;
 }
 
 .toTop a:select {
@@ -162,6 +162,9 @@ html {
   text-align: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 0 100%;
 }
 
@@ -184,12 +187,25 @@ html {
       flex-wrap: wrap;
   border-radius: 5px;
   position: relative;
-  width: 15rem;
+  width: 18rem;
   height: 3rem;
   background-color: #d9d9d9;
   font-size: 20px;
+  font-weight: 900;
   border: none;
   padding-left: 0.4rem;
+}
+
+.section .fa-remove {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.section .fa-remove:hover {
+  background-color: #1b1b1b;
+  color: #ffffff;
 }
 
 .input {

@@ -28,19 +28,34 @@
 
 .section{
     @include flexCenter(coloumn);
+    justify-content: space-between;
     margin: 0 100%;
 
     .dropDown{
         @include flexCenter(coloumn);
         @include style;
         position: relative;
-        width:15rem;
+        width:18rem;
         height:3rem;
         background-color:$white;
         font-size: map-get($fontSize,small);
+        font-weight: map-get($fontWeight, bold);
         border: none;
-        padding-left: 0.4rem;;
+        padding-left: 0.4rem;
+    }
 
+    .fa-remove{
+        // border: 2px solid red;
+        // background: #ffffff;
+        margin: 10px;
+        padding: 10px;
+        border-radius:10px;
+        font-size: map-get($fontSize, small);
+    }
+
+    .fa-remove:hover{
+        background-color: #1b1b1b;
+        color: #ffffff;
     }
 
 

@@ -241,9 +241,21 @@ ToRgb = (inp) => {
 
 //RGB to Hex
 ToHex = (inp) => {      //inp = "1,1,1"
+
+
   let stringArray = inp.split(","); //["1","1","1"];
-  let array = stringArray.map( item => Number(item));  //[1,1,1]
-  let check = array.filter( item => item>225 || Number.isNaN(item));
+  console.log(stringArray);
+
+  //to counter the case like -> 12,,12,12
+  let stringArray2 = stringArray.filter(item => !item.length==0);console.log(stringArray2);
+
+  if(stringArray.length!==3 || stringArray2.length!==3 || inp.length>11){
+    alert(`Enter a valid RGB value !!!`);
+    return;
+  }
+
+  let array = stringArray2.map( item => Number(item));  //[1,1,1]
+  let check = array.filter( item => item>255 || Number.isNaN(item));
   console.log(check);
   if(check.length!=0){
     alert(`enter a valid RGB value`);
@@ -302,6 +314,7 @@ let search = document.querySelector(`.fa-search`);
 let copyButton = document.querySelector(`.fa-clone`);
 let preview = document.querySelector(`.preview`);
 let octothorp = document.querySelector(`.octothorp`);
+let clear = document.querySelector(`.fa-remove`);
 
 //Event Listener to store current state
 let current = `Hex to RGB`;   // Current will store the current value of drop down
@@ -389,8 +402,11 @@ const showOutput = (output) => {
       // alert(`???`); 
 }
 
-
-
+clear.addEventListener(`click`, () => {
+  inputField.value='';
+  outputField.innerText='';
+  setPreview(`none`);
+})
 
 
 
