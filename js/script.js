@@ -4,6 +4,8 @@
 // of single entites
 
 
+
+// Major functions
   
 //Input : Number
 //Output: String
@@ -164,6 +166,8 @@ return hex;
 
 //----------------------------------------------------------------------------------------------
 
+// Sub-Major functions
+
 //Functions to maniplate IP/OP for the simple functions
 
 //Dec to Bin
@@ -204,15 +208,6 @@ ToDec = (inp) => {
   return binToDec(inp); 
 }
 
-isPreview = () => {    //this is not working, something freaky about the css/scss
-  if(preview.style.display === "")
-  return 0;
-
-  else
-  return 1;
-
-}
-
 //hex to rgb
 ToRgb = (inp) => {
   if(inp.length<6){
@@ -233,13 +228,9 @@ ToRgb = (inp) => {
 }
 
 //RGB to Hex
-ToHex = (inp) => {      //inp = "1,1,1"
-
-
-  let stringArray = inp.split(","); //["1","1","1"];
-
-  //to counter the case like -> 12,,12,12
-  let stringArray2 = stringArray.filter(item => !item.length==0);
+ToHex = (inp) => {                  //inp = "1,1,1"
+  let stringArray = inp.split(","); //["1","1","1"]
+  let stringArray2 = stringArray.filter(item => !item.length==0); //to counter the case like -> 12,,12,12
 
   if(stringArray.length!==3 || stringArray2.length!==3 || inp.length>11){
     alert(`Enter a valid RGB value !!!`);
@@ -263,6 +254,8 @@ ToHex = (inp) => {      //inp = "1,1,1"
 
 //---------------------------------------------------------------------------------------------
 
+// Helping functions
+
 //set state to none or block
 setPreview = (state) => {
   preview.style.display = state;
@@ -283,6 +276,7 @@ setMinlength = (n) => {
   inputField.setAttribute("minlength",n);
 }
 
+//For removing and adding
 setOctothorp = (state) => {
   octothorp.style.display = state;
 }
@@ -300,6 +294,8 @@ const userInput = () => {return inputField.value;};
 
 
 // ---------------------------------------------------------------------------------------------------------
+// Event Listeners
+
 // Main function from here
 let dropDown = document.querySelector(`select`); 
 let inputField = document.querySelector(`input`);
@@ -357,6 +353,7 @@ if (e.key === 'Enter') {
 
 });
 
+// Event Listener for cross button
 clear.addEventListener(`click`, () => {
   inputField.value='';
   outputField.innerText='';
@@ -379,6 +376,7 @@ const showOutput = (output) => {
 
 //-----------------------------------------------------------------------------------------------
 
+// Main Function
 
 //Make a main function to treat the user input and the current to produce some outputs
 
@@ -399,9 +397,3 @@ const mainFunc = (inp,current) => {
 };
 
 
-
-// Major functions
-// Sub-Major functions
-// Helping functions
-// Event Listeners
-// Main Function
