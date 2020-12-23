@@ -287,9 +287,17 @@ updatePlaceholder = (value) => {
 }
 
 // Function to fetch user input
-const userInput = () => {return inputField.value;};
+const userInput = () => {
+  return inputField.value;
+};
 
+//To check user Input is valid 
+const check = (inp) => {
 
+  // Eliminate the inputs like ==>  "      " 
+
+  return 1;
+}
 
 
 
@@ -342,13 +350,23 @@ dropDown.addEventListener(`change`, () => {
 
 search.addEventListener(`click`, ()=>{
   let inp = userInput();
+  if(check(inp))
   mainFunc(inp,current);
+
+  else{
+    alert(`Please Enter Something`);
+    return;}
 });
 
 inputField.addEventListener(`keypress` , (e)=>{
 if (e.key === 'Enter') {
       let inp = userInput();
+      if(check(inp))
       mainFunc(inp,current);
+    
+      else{
+        alert(`Please Enter Something`);
+        return;}
     }
 
 });
