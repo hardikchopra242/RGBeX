@@ -44,16 +44,6 @@
         padding-left: 0.4rem;
         // margin: 0 auto 0 0;
     }
-
-    .fa-remove{
-        font-size: map-get($fontSize, small);;
-    }
-
-    .fa-remove:hover{
-        background-color: #828288;
-    }
-
-
 }
 
 // input------------------------------------------------------------------------
@@ -66,16 +56,20 @@
     margin:1.5rem 0;
     
     i{
-        height: 40px;
+        height: 50px;
         background-color:var(--div-background-light);
-        padding: 10px;
+        padding: 15px;
+    }
+
+    .fa-remove{
+        font-size: map-get($fontSize,small);
     }
     i:hover{
     background-color: #828288;
     }
 
     .octothorp{
-        padding-left: 3px;
+        padding-left: 10px;
         font-weight: map-get($fontWeight, bold);
 	    font-size: map-get($fontSize, small );
 
@@ -87,7 +81,7 @@ input{
     @include style;
 	background-color:$white;
 	width: 20rem;
-	height: 3rem;
+    height: 3rem;
 	padding:20px 10px;
 	font-weight: map-get($fontWeight, bold);
 	font-size: map-get($fontSize, small );
@@ -202,7 +196,7 @@ select,input:focus{
 
 //Media-Query
 @media (max-width:550px){
-    
+
     .header{
         #{&}__para{
             font-size: 15px;
@@ -215,15 +209,28 @@ select,input:focus{
         }
     }
 
-
+.input{
     input{
        font-size: 15px;
        width:15rem;
        margin:0 10px;
     }
 
+    i:hover{
+        background-color:initial;
+       }
+
+}
+
     .output{
         margin: 0 10px;
+
+        .description{
+            
+            .fa-clone:hover{
+            transform:none;
+           }
+       }
     }
 
     .footer{
