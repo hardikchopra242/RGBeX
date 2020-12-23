@@ -1,12 +1,12 @@
 <h1 align="center">RGBeX</h1>
 
-<h3 align="center">Convert RGB values to Hexadecimal and Hexa to RGB and much more !!!</h3>
+<h3 align="center">Convert Hexadecimal values to RGB and RGB to Hexa and much more !!!</h3>
 
-<!-- <p align="center">[Click Here](https://hardikchopra242.github.io/RGBeX/) to see it live -></p> -->
+<p align="center"><a href="https://hardikchopra242.github.io/RGBeX/">Click here</a> to see it live!</p>
 
 ---
 
-### Some other features include:
+## :fire: Some other features includes
 * RGB to Hexadecimal
 * Hexadecimal to RGB
 * Color View of the Hexa/RGB code
@@ -15,5 +15,15 @@
 
 ---
 
-### License
+## :key: How to Contribute?
+* If you want to suggest some other feature, please open an **issue**
+* If you noticed some typos or a need to fix syntax and want to fix it, don't hesitate to make a **pull request**
+* You can find existing issues [here](https://github.com/hardikchopra242/RGBeX/issues), if you can fix them, go for it!
+
+---
+
+## License
 [MIT License](https://github.com/hardikchopra242/RGBeX/blob/gh-pages/LICENSE)
+
+## Code of Conduct
+[Contributor Covenant](https://github.com/hardikchopra242/RGBeX/blob/gh-pages/CODE_OF_CONDUCT.md)
