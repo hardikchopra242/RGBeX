@@ -2,7 +2,7 @@
 
 <h3 align="center">Convert Hexadecimal values to RGB and RGB to Hexa and much more !!!</h3>
 
-<p align="center"><a href="https://hardikchopra242.github.io/RGBeX/">Click here</a> to see it live!</p>
+<p align="center"><a href="https://hardikchopra242.github.io/RGBeX/" target="_blank">Click here</a> to see it live!</p>
 
 ---
 
