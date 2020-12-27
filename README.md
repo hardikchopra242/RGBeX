@@ -4,6 +4,8 @@
 
 <p align="center"><a href="https://hardikchopra242.github.io/RGBeX/" target="_blank">Click here</a> to see it live!</p>
 
+![screenshot](https://github.com/hardikchopra242/RGBeX/blob/gh-pages/assets/images/screenshot.jpeg?raw=true)
+
 ---
 
 ## :fire: Some other features includes
@@ -16,7 +18,7 @@
 ---
 
 ## :key: How to Contribute?
-* If you want to suggest some other feature, please open an **issue**
+* If you want to suggest some other feature, please open an [**issue**](https://github.com/hardikchopra242/RGBeX/issues)
 * If you noticed some typos or a need to fix syntax and want to fix it, don't hesitate to make a **pull request**
 * You can find existing issues [here](https://github.com/hardikchopra242/RGBeX/issues), if you can fix them, go for it!
 
