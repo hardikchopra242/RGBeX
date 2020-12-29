@@ -288,16 +288,22 @@ updatePlaceholder = (value) => {
 
 // Function to fetch user input
 const userInput = () => {
-  return inputField.value;
+	let inp = inputField.value;
+	inp = inp.trim(); 
+    return inp;
 };
 
-//To check user Input is valid 
-const check = (inp) => {
+// Not Used
+// //To check user Input is valid 
+// const check = (inp) => {
 
-  // Eliminate the inputs like ==>  "      " 
+//   inp = inp.trim();
 
-  return 1;
-}
+//   if(inp.length>0)
+//   	return 1;
+//   else
+//   	return 0;
+// }
 
 
 
@@ -350,22 +356,22 @@ dropDown.addEventListener(`change`, () => {
 
 search.addEventListener(`click`, ()=>{
   let inp = userInput();
-  if(check(inp))
+  if(inp.length)
   mainFunc(inp,current);
 
   else{
-    alert(`Please Enter Something`);
+    alert(`Please Enter Something  to get started!`);
     return;}
 });
 
 inputField.addEventListener(`keypress` , (e)=>{
 if (e.key === 'Enter') {
       let inp = userInput();
-      if(check(inp))
+      if(inp.length)
       mainFunc(inp,current);
     
       else{
-        alert(`Please Enter Something`);
+        alert(`Please Enter Something to get started!`);
         return;}
     }
 
