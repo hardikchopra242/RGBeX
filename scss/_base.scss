@@ -14,7 +14,7 @@ html{
     @include flexCenter(coloumn);
     align-items:flex-start;
     background-color: teal;
-    background-image: url('../../assets/images/background.jpg');
+    background-image: url('../../assets/images/hexagon.svg');
     background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -39,7 +39,7 @@ html{
 	border-radius: 30px;
 	background-color: $white;
 	color: $black;
-    animation: showTop 0.7s ease-in; 
+    animation: showTop 0.7s ease-in;
     transition: 0.3s;
 
     a{
@@ -54,7 +54,7 @@ html{
     a:select{
         text-decoration: none;
     }
-    
+
 }
 
 .toTop:hover{

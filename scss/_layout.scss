@@ -5,11 +5,12 @@
 
     #{&}__heading{
         margin: 0 100%;
-        font-family: 'Londrina Solid', cursive;
+        font-family: 'Montserrat', sans-serif;
         font-weight: map-get($fontWeight, normal);
         letter-spacing: 2px;
         font-size: map-get($fontSize, large);
-        border-bottom:5px solid #111111;
+        color : $white;
+        user-select: none;
     }
    
     #{&}__para{
