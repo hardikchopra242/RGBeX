@@ -4,7 +4,7 @@
 
 <p align="center"><a href="https://hardikchopra242.github.io/RGBeX/" target="_blank">Click here</a> to see it live!</p>
 
-![screenshot](https://github.com/hardikchopra242/RGBeX/blob/gh-pages/assets/images/screenshot.jpeg?raw=true)
+![screenshot](https://github.com/hardikchopra242/RGBeX/blob/gh-pages/assets/images/screenshot.png?raw=true)
 
 ---
 
