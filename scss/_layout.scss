@@ -165,10 +165,9 @@ select,input:focus{
     background-color:#0c0c0c;
 	text-align: center;
 	margin: auto 0;
-	padding-top: 5rem;
-    padding-bottom: 5rem;
+	padding-top: 2em;
+    padding-bottom: 2em;
     color: $white;
-
     
     p:nth-child(1){
         font-weight: lighter;
@@ -176,14 +175,14 @@ select,input:focus{
     }
     
      p:nth-child(2){
-        margin: 2rem 0 1rem 0;
+        margin: 1rem 0 1rem 0;
         font-size: 1.5rem;
         font-weight:normal;
     
     }
 
     a{
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: $white;
         text-decoration: none;
         margin: 0 0.7rem;
@@ -191,13 +190,16 @@ select,input:focus{
 
     #end{
         text-align: center;
-        padding: 2rem 2rem 0rem 2rem;
+        padding: 1em 2em;
 
         #repoLink{
-            font-size:map-get($fontSize , small);
-            margin:0 0.3rem;
+            margin : 0;
+            font-size: 1rem;
         }
-        
+
+        #repoLink:hover{
+            text-decoration: underline;
+        }        
     }
 }
 

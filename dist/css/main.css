@@ -262,8 +262,8 @@ select, input:focus {
   background-color: #0c0c0c;
   text-align: center;
   margin: auto 0;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 2em;
+  padding-bottom: 2em;
   color: #d9d9d9;
 }
 .footer p:nth-child(1) {
@@ -271,23 +271,26 @@ select, input:focus {
   font-size: 2rem;
 }
 .footer p:nth-child(2) {
-  margin: 2rem 0 1rem 0;
+  margin: 1rem 0 1rem 0;
   font-size: 1.5rem;
   font-weight: normal;
 }
 .footer a {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #d9d9d9;
   text-decoration: none;
   margin: 0 0.7rem;
 }
 .footer #end {
   text-align: center;
-  padding: 2rem 2rem 0rem 2rem;
+  padding: 1em 2em;
 }
 .footer #end #repoLink {
-  font-size: 20px;
-  margin: 0 0.3rem;
+  margin: 0;
+  font-size: 1rem;
+}
+.footer #end #repoLink:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 550px) {
