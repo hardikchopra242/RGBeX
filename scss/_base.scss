@@ -13,7 +13,7 @@ html{
 .wrapper{
     @include flexCenter(coloumn);
     align-items:flex-start;
-    background-color: teal;
+    background-color: #0F2B46;
     background-image: url('../../assets/images/hexagon.svg');
     background-repeat: no-repeat;
 	background-size: cover;
