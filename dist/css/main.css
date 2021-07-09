@@ -40,7 +40,7 @@ html {
   text-align: center;
   font-size: 30px;
   border-radius: 30px;
-  background-color: #d9d9d9;
+  background-color: #efefef;
   color: #1b1b1b;
   -webkit-animation: showTop 0.7s ease-in;
           animation: showTop 0.7s ease-in;
@@ -107,11 +107,12 @@ html {
 }
 .header .header__heading {
   margin: 0 100%;
-  font-family: "Montserrat", sans-serif;
+  margin-top: 0.5em;
+  font-family: "Secular One", sans-serif;
   font-weight: 600;
   letter-spacing: 2px;
   font-size: 60px;
-  color: #d9d9d9;
+  color: #1b1b1b;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -153,7 +154,7 @@ html {
   position: relative;
   width: 100%;
   height: 3rem;
-  background-color: #d9d9d9;
+  background-color: #efefef;
   font-size: 20px;
   font-weight: 900;
   border: none;
@@ -169,7 +170,7 @@ html {
   text-align: center;
   flex-wrap: wrap;
   flex-wrap: nowrap;
-  background-color: #d9d9d9;
+  background-color: #efefef;
   margin: 1.5rem 0;
 }
 .input i {
@@ -191,9 +192,9 @@ html {
 
 input {
   border-radius: 5px;
-  background-color: #d9d9d9;
   width: 20rem;
   height: 3rem;
+  background-color: #efefef;
   padding: 20px 10px;
   font-weight: 900;
   font-size: 20px;

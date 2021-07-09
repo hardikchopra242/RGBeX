@@ -4,12 +4,13 @@
     @include flexCenter(coloumn);
 
     #{&}__heading{
-        margin: 0 100%;
-        font-family: 'Montserrat', sans-serif;
+        margin : 0 100%;
+        margin-top: 0.5em;
+        font-family: 'Secular One', sans-serif;
         font-weight: map-get($fontWeight, normal);
         letter-spacing: 2px;
         font-size: map-get($fontSize, large);
-        color : $white;
+        color : $black;
         user-select: none;
     }
    
@@ -44,7 +45,7 @@
         position: relative;
         width:100%;
         height:3rem;
-        background-color:$white;
+        background-color:#efefef;
         font-size: map-get($fontSize,small);
         font-weight: map-get($fontWeight, bold);
         border: none;
@@ -59,7 +60,7 @@
     @include style;
     @include flexCenter(coloumn);
     flex-wrap: nowrap;
-    background-color: $white;
+    background-color:#efefef;
     margin:1.5rem 0;
     
     i{
@@ -67,28 +68,28 @@
         background-color:var(--div-background-light);
         padding: 15px;
     }
-
+    
     .fa-remove{
         font-size: map-get($fontSize,small);
     }
     i:hover{
-    background-color: #828288;
+        background-color: #828288;
     }
-
+    
     .octothorp{
         padding-left: 10px;
         font-weight: map-get($fontWeight, bold);
 	    font-size: map-get($fontSize, small );
-
+        
     }
 }
 
 
 input{
     @include style;
-	background-color:$white;
 	width: 20rem;
     height: 3rem;
+    background-color:#efefef;
 	padding:20px 10px;
 	font-weight: map-get($fontWeight, bold);
 	font-size: map-get($fontSize, small );
